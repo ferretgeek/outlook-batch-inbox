@@ -1,26 +1,12 @@
-![Outlook 批量收件台](docs/images/social-preview.png)
-
 # Outlook 批量收件台
 
 中文 · [English](README_EN.md)
 
-[![CI](https://github.com/ferretgeek/outlook-batch-inbox/actions/workflows/ci.yml/badge.svg)](https://github.com/ferretgeek/outlook-batch-inbox/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/ferretgeek/outlook-batch-inbox/actions/workflows/codeql.yml/badge.svg)](https://github.com/ferretgeek/outlook-batch-inbox/actions/workflows/codeql.yml)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-315b70?logo=python&logoColor=white)](https://www.python.org/)
-[![零依赖](https://img.shields.io/badge/%E8%BF%90%E8%A1%8C%E4%BE%9D%E8%B5%96-0-2f7d68)](requirements.txt)
-[![License: MIT](https://img.shields.io/badge/License-MIT-e57958.svg)](LICENSE)
+在一个页面查看最多 50 个已授权 Outlook 邮箱的最近邮件和验证码，适合集中查收多个邮箱。
 
-> 一次查看最多 50 个 Outlook 邮箱的最新邮件和验证码。只用 OAuth，不要密码。
+适用环境：Python 3.10+；需提前取得每个邮箱的 Microsoft OAuth 授权（client ID 和 refresh token），使用时需联网，不接受邮箱密码。
 
-## 为什么会需要它
-
-如果你手上有一批 Microsoft 邮箱（测试账号、注册用的小号、团队共用的功能邮箱），要从里面拿验证码，一个个登录网页版是一件很消耗人的事：登录、等加载、找信、复制、退出、下一个。
-
-这个工具把这件事变成一次操作：一批账号一起读，最近的邮件和识别出来的验证码列在同一个页面上。
-
-它**只接受 OAuth2 授权，不接受邮箱密码**；凭据只在这一次请求的内存里用，用完就没了。界面上账号默认脱敏、邮件详情默认遮挡——因为一屏几十个真实邮箱地址本身就是风险。
-
-[部署指南](docs/部署指南.md) · [安全模型](docs/安全模型.md) · [发布审计](docs/发布审计.md) · [报告问题](https://github.com/ferretgeek/outlook-batch-inbox/issues)
+[先准备邮箱授权](docs/认证准备.md) · [本地启动](#本地启动) · [服务器部署](docs/部署指南.md)
 
 ## 界面
 

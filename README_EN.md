@@ -1,26 +1,12 @@
-![Outlook batch inbox](docs/images/social-preview.png)
-
 # Outlook batch inbox
 
 [中文](README.md) · English
 
-[![CI](https://github.com/ferretgeek/outlook-batch-inbox/actions/workflows/ci.yml/badge.svg)](https://github.com/ferretgeek/outlook-batch-inbox/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/ferretgeek/outlook-batch-inbox/actions/workflows/codeql.yml/badge.svg)](https://github.com/ferretgeek/outlook-batch-inbox/actions/workflows/codeql.yml)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-315b70?logo=python&logoColor=white)](https://www.python.org/)
-[![Runtime dependencies](https://img.shields.io/badge/runtime_dependencies-0-2f7d68)](requirements.txt)
-[![License: MIT](https://img.shields.io/badge/License-MIT-e57958.svg)](LICENSE)
+View recent messages and verification codes from up to 50 authorized Outlook mailboxes on one page.
 
-> Read recent mail and verification codes from up to 50 Outlook mailboxes at once. OAuth only, never passwords.
+Requirements: Python 3.10+, a network connection, and Microsoft OAuth credentials for each mailbox (client ID and refresh token). Mailbox passwords are not accepted.
 
-## Why this exists
-
-If you manage a set of Microsoft mailboxes — test accounts, sign-up accounts, shared functional addresses — pulling verification codes out of them one web session at a time is genuinely draining: sign in, wait, find the message, copy, sign out, next.
-
-This turns that into one operation: read a whole batch at once, with recent messages and detected codes listed on a single page.
-
-It accepts **OAuth2 authorization only, never a mailbox password**, and credentials live only in memory for the duration of one request. Accounts are masked by default and message details are veiled — because a screen full of real addresses is itself a risk.
-
-[Deployment](docs/DEPLOYMENT.md) · [Security model](docs/SECURITY_MODEL.md) · [Authentication setup](docs/AUTHENTICATION.md) · [Report an issue](https://github.com/ferretgeek/outlook-batch-inbox/issues)
+[Prepare mailbox authorization](docs/AUTHENTICATION.md) · [Run locally](#running-locally) · [Server deployment](docs/DEPLOYMENT.md)
 
 ## Interface
 
